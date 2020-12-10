@@ -119,21 +119,21 @@ body {
 }
 
 .discussions .discussion .photo {
-    margin-left:20px;
+    margin-left: 20px;
     display: block;
-    width: 45px;
-    height: 45px;
     background: #E6E7ED;
     -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
+    -webkit-border-radius: 50%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    width: 105px;
+    height: 70px;
 }
 
 .online {
     position: relative;
-    top: 30px;
+    top: 55px;
     left: 35px;
     width: 13px;
     height: 13px;

@@ -1,5 +1,6 @@
 //@flow
 import {all, call, put, takeEvery, race, take, select} from "redux-saga/effects";
+import {push} from "connected-react-router";
 
 function * giris(payload){
   while(true){
@@ -22,12 +23,14 @@ function * giris(payload){
 
           const task=yield take(["CONNECTED"])
 
-          console.log(task);
+          yield call(store, {clientId: payload.clientId,username:payload.username,access_token: "e0dc9205-e437-4512-99fc-f1b7a340adab",isOnline:true})
 
           yield put({type:"USER_LOGIN_SUCCESS",payload:{
                   userId:"7f55526f-c287-4cb7-82cc-6aaeda1002b7",
                   ...payload,
               }})
+
+
 
           return true
       }catch(error){
@@ -36,10 +39,13 @@ function * giris(payload){
       }
   }
 }
+function store(payload) {
+    localStorage.setItem("chat", JSON.stringify(payload));
+}
 
 function *girisFlow({payload}){
     try{
-        console.log(payload)
+
 
         const[success,failed]=yield race([
             call(giris,payload),
@@ -48,8 +54,13 @@ function *girisFlow({payload}){
         /// store clientId and name
         /// redirect to chat pannel
 
-        console.log(success,failed)
 
+if(success){
+
+    yield put(push("chat"))
+
+    console.log(success, failed)
+}
     }catch(error){
         console.dir(error)
     }

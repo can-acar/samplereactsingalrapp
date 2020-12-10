@@ -2,9 +2,20 @@ import "react-app-polyfill/ie11";
 import "react-app-polyfill/stable";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/index.css';
-import App from './App';
+
+
+
 import reportWebVitals from './reportWebVitals';
+import {fab} from "@fortawesome/free-brands-svg-icons";
+import {fas} from "@fortawesome/free-solid-svg-icons";
+import {far} from "@fortawesome/free-regular-svg-icons";
+import  {library} from "@fortawesome/fontawesome-svg-core";
+import App from './App';
+import './assets/index.css';
+
+library.add(fab, fas, far)
+
+
 
 ReactDOM.render(
   <React.StrictMode>

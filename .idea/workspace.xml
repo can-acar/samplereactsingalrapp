@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e0297d7-282b-4405-bf65-6e798fa10451" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/giri.action.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/chat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/giris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commons/useReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commons/uuid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/configureStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/giris.container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/message.container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/messagelist.container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/userlist.container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/history/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sagas/giris.saga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/giri.redux.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/samplereactsingalrapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/samplereactsingalrapp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/aside.container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/search.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commons/useReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commons/useReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/chat.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/chat.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/userlist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/userlist.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/root.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/root.saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/root.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/root.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas/chat.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/chat.saga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas/giris.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/giris.saga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/chat.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chat.redux.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +96,7 @@
       <updated>1607492065611</updated>
       <workItem from="1607492067427" duration="6553000" />
       <workItem from="1607591067211" duration="5522000" />
-      <workItem from="1607598761324" duration="3296000" />
+      <workItem from="1607598761324" duration="7918000" />
     </task>
     <servers />
   </component>

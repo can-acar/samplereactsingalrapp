@@ -52,10 +52,6 @@ export const useReducer = ({key, reducer, isDelete = true}: select) => {
 
     useEffect(() => {
 
-        if (!store.asyncReducers.hasOwnProperty(key)) {
-            store.injectReducer(key, reducer);
-        }
-
         return () => {
             if (isDelete)
                 store.removeReducer(key);
