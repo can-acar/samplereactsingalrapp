@@ -123,11 +123,11 @@ body {
     display: block;
     background: #E6E7ED;
     -moz-border-radius: 50px;
-    -webkit-border-radius: 50%;
+    -webkit-border-radius: 70px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 105px;
+    width: 70px;
     height: 70px;
 }
 

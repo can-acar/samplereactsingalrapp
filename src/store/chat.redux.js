@@ -5,23 +5,26 @@ import {Action} from "redux";
 let store = JSON.parse(localStorage.getItem("chat"));
 
 type IState={
-    userId: string,
+
     clientId: string,
+    connectionId:string,
     access_token: string,
     time: string,
     connected: boolean,
     loading: boolean,
-    ...store
+
 }
 
 
 const InitialState :IState= {
-    userId: null,
+
     clientId: null,
+    connectionId:null,
     access_token: null,
     time: null,
     connected: false,
-    loading: false
+    loading: false,
+    ...store
 };
 
 const actions = {

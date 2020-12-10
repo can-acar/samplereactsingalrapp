@@ -1,0 +1,17 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/.*/spec/.*
+.*/node_modules/.*
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/build/.*
+
+[options]
+module.name_mapper='^utils\/\(.*\)$' -> '<PROJECT_ROOT>/src/utils/\1'
+module.name_mapper='^components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^containers\/\(.*\)$' -> '<PROJECT_ROOT>/src/containers/\1'
+module.name_mapper='^sagas\/\(.*\)$' -> '<PROJECT_ROOT>/src/sagas/\1'
+module.name_mapper='^actions\/\(.*\)$' -> '<PROJECT_ROOT>/src/actions/\1'
+module.name_mapper='^commons\/\(.*\)$' -> '<PROJECT_ROOT>/src/commons/\1'
+module.name_mapper='^store\/\(.*\)$' -> '<PROJECT_ROOT>/src/store/\1'
+
+[version]
+^0.137.0

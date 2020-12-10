@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e0297d7-282b-4405-bf65-6e798fa10451" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/aside.container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/search.container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/users.redux.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.flowconfig" beforeDir="false" afterPath="$PROJECT_DIR$/src/.flowconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commons/useReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commons/useReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/chat.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/chat.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/userlist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/userlist.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/chat.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/chat.saga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sagas/giris.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/giris.saga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/chat.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chat.redux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user.redux.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +28,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <option name="autoSaveEnabled" value="false" />
+    <option name="typeCheckingEnabled" value="false" />
+    <service-enabled>false</service-enabled>
+    <exe-path>$USER_HOME$/AppData/Roaming/npm/node_modules/flow-bin</exe-path>
+    <auto-save>false</auto-save>
+  </component>
   <component name="ProjectId" id="1lPHyuNA932oMSTPpJ05uZ0RZxk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -49,6 +51,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -58,7 +62,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
     <property name="ts.external.directory.path" value="C:\Users\can.acar\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\203.5981.135\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -97,6 +101,7 @@
       <workItem from="1607492067427" duration="6553000" />
       <workItem from="1607591067211" duration="5522000" />
       <workItem from="1607598761324" duration="7918000" />
+      <workItem from="1607611982846" duration="3228000" />
     </task>
     <servers />
   </component>

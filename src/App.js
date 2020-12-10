@@ -35,7 +35,7 @@ function App() {
                   </Switch>
                 </Suspense>
               </ConnectedRouter>
-          </Provider> );
+          </Provider>);
 }
 
 export default App;
