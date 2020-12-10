@@ -1,39 +1,38 @@
 //@flow
 import *as React from "react";
 import {memo} from "react";
+import '../assets/chat.css';
+
 
 type IProps={
 
 }
 
 
-type IMessageContainerNode={
-
-}
 
 
-type IMessageListNodeNode={
 
-}
-
-const UserListNode=memo((props)=>{
-    return <div></div>
-})
-
-const MessageListNode=memo((props:IMessageListNodeNode)=>{
-
-    return <div></div>
-})
-
-const MessageContainerNode=memo((props:IMessageContainerNode)=>{
-
-return <div></div>
-
-})
 
 const ChatContainerNode=(props:IProps):React.Node=>{
 
-    return <div></div>
+    return <div className="container">
+        <div className="row">
+            <nav className="menu">
+                <ul className="items">
+                    <li className="item">
+                        <i className="fa fa-home" aria-hidden="true"></i>
+                    </li>
+                    <li className="item">
+                        <i className="fa fa-user" aria-hidden="true"></i>
+                    </li>
+                    <li className="item item-active">
+                        <i className="fa fa-commenting" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
 }
 
-export const ChatContainer=memo(ChatContainerNode)
+export const Chat=memo(ChatContainerNode)

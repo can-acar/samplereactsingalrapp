@@ -26,3 +26,6 @@ package-lock.json
 
 .idea
 .vscode
+package-lock.json
+.idea/samplereactsingalrapp.iml
+.idea/workspace.xml
