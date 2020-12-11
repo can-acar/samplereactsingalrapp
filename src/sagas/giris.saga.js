@@ -25,17 +25,27 @@ function* giris(payload){
             ])
 
             const task = yield take(["CONNECTED"])
-            console.log(payload)
 
             yield call(store, {clientId: payload.clientId, username: payload.username, access_token: "e0dc9205-e437-4512-99fc-f1b7a340adab", isOnline: true})
 
-            yield put({
-                type: "USER_LOGIN_SUCCESS",
-                payload: {
-                    userId: "7f55526f-c287-4cb7-82cc-6aaeda1002b7",
-                    ...payload,
-                }
-            })
+            yield all([
+                put({
+                        type: "USER_LOGIN_SUCCESS",
+                        payload: {
+                            userId: payload.clientId,
+                            ...payload,
+                        }
+                }),
+                put({
+                    type:"INVOKE",
+                    payload:{
+                        method:"join",
+                        clientId:payload.clientId,
+                        username:payload.username
+                    }
+                })
+
+            ])
 
 
             return true

@@ -4,12 +4,16 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {memo,useEffect} from "react";
 import '../assets/chat.css';
 import {useDispatch, useSelector} from "react-redux";
+import {useState,useCallback} from "react";
 import {useReducer} from "../commons/useReducer";
 import {chat_redux} from "../store/chat.redux";
 import {giris_redux} from "../store/giri.redux";
+import {Footer} from "./footer.container";
+import {Header} from "./header.container";
+import {MessageList} from "./messagelist.container";
 import {Search} from "./search.container";
 import {UserList} from "./userlist.container";
-
+import classnames from "classnames";
 
 type IProps={
 
@@ -21,6 +25,8 @@ type IProps={
 
 
 const ChatContainerNode=(props:IProps):React.Node=>{
+
+    const[nav,changeNav]=useState({current:"users"});
     const chat=useReducer({key:'chat',reducer:chat_redux})
     const dispatch=useDispatch()
 
@@ -28,17 +34,24 @@ const ChatContainerNode=(props:IProps):React.Node=>{
         console.log(chat)
     },[chat])
 
+    const onChangeNav=useCallback((nav)=>{
+        changeNav(nav)
+    },[changeNav])
+
+    const classname=(current)=>classnames()
+
+
     return <div className="container">
         <div className="row">
             <nav className="menu">
                 <ul className="items">
-                    <li className="item">
-                        <FontAwesomeIcon icon={ "home"} />
+                    <li className="item" onClick={()=>onChangeNav("main")}>
+                        <FontAwesomeIcon icon={"home"} />
                     </li>
-                    <li className="item">
-                        <FontAwesomeIcon icon={ "user"} />
+                    <li className="item item-active" onClick={()=>onChangeNav("users")} >
+                        <FontAwesomeIcon icon={"user"} />
                     </li>
-                    <li className="item item-active">
+                    <li className="item" onClick={()=>onChangeNav("chat")}>
                         <FontAwesomeIcon  icon={"comments"} size={"2x"}/>
                     </li>
                 </ul>
@@ -48,11 +61,9 @@ const ChatContainerNode=(props:IProps):React.Node=>{
                 <UserList/>
             </section>
             <section className={"chat"}>
-                <div className="header-chat">
-                    <i className="icon fa fa-user-o" aria-hidden="true"></i>
-                    <p className="name">{chat.username}</p>
-                    <i className="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
-                </div>
+                 <Header/>
+                 <MessageList/>
+                 <Footer/>
             </section>
         </div>
     </div>

@@ -10,9 +10,11 @@ type IUserListNode={
 
 const UserListNode=memo((props:IUserListNode)=>{
 
+
+
     return <div className="discussion message-active">
         <div className="photo">
-            <div className="online"/>
+            <div className="online user-list"/>
             <FontAwesomeIcon
                 icon={"user"}
                 style={{
@@ -34,4 +36,4 @@ const UserListNode=memo((props:IUserListNode)=>{
     </div>
 })
 
-export const     UserList=memo(UserListNode)
+export const UserList=memo(UserListNode)

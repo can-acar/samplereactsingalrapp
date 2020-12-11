@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e0297d7-282b-4405-bf65-6e798fa10451" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/users.redux.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/footer.container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/header.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.flowconfig" beforeDir="false" afterPath="$PROJECT_DIR$/src/.flowconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/chat.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/chat.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/chat.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/messagelist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/messagelist.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/userlist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/userlist.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sagas/giris.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/giris.saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chat.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chat.redux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user.redux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/signalr.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/signalr.saga.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Users\can.acar\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\203.5981.135\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -102,6 +102,11 @@
       <workItem from="1607591067211" duration="5522000" />
       <workItem from="1607598761324" duration="7918000" />
       <workItem from="1607611982846" duration="3228000" />
+      <workItem from="1607664869707" duration="936000" />
+      <workItem from="1607668879489" duration="2234000" />
+      <workItem from="1607679362556" duration="840000" />
+      <workItem from="1607684447582" duration="44000" />
+      <workItem from="1607685614053" duration="7355000" />
     </task>
     <servers />
   </component>

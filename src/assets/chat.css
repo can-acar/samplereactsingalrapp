@@ -119,21 +119,33 @@ body {
 }
 
 .discussions .discussion .photo {
-    margin-left: 20px;
+    margin-left:20px;
     display: block;
+    width: 70px;
+    height: 70px;
     background: #E6E7ED;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 70px;
+    -moz-border-radius: 75px;
+    -webkit-border-radius: 75px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 70px;
-    height: 70px;
 }
+
+.online.user-list {
+    position: relative;
+    top: 55px;
+    left: 52px;
+    width: 13px;
+    height: 13px;
+    background-color: #8BC34A;
+    border-radius: 13px;
+    border: 3px solid #FAFAFA;
+}
+
 
 .online {
     position: relative;
-    top: 55px;
+    top: 30px;
     left: 35px;
     width: 13px;
     height: 13px;
@@ -176,6 +188,7 @@ body {
 }
 
 .chat {
+    position: relative;
     width: calc(65% - 85px);
 }
 
@@ -262,7 +275,7 @@ body {
 }
 
 .footer-chat {
-    width: calc(65% - 66px);
+    width: 100%;
     height: 80px;
     display:flex;
     align-items: center;
@@ -280,13 +293,14 @@ body {
 }
 
 .chat .footer-chat .send {
-    color:#fff;
+    color: #fff;
     background-color: #4f6ebd;
-    position: absolute;
-    right: 50px;
+    position: relative;
+    right: 0;
     padding: 12px 12px 12px 12px;
     border-radius: 50px;
-    font-size: 14pt;
+    width: 54px;
+    height: 51px;
 }
 
 .chat .footer-chat .name {
@@ -303,10 +317,10 @@ body {
 }
 
 .write-message {
-    border:none !important;
-    width:60%;
+    background-color: #f6f6f6;
+    border: none !important;
+    width: 100%;
     height: 50px;
-    margin-left: 20px;
     padding: 10px;
 }
 

@@ -77,12 +77,16 @@ function* hubFlow({payload}: { channel: string, clientId: string, access_token: 
     let connection = yield call(socket, payload.url, payload);
     let channel = yield call(createChannel, connection, payload.channel);
 
-    const [task, cancel] = yield race([
+    const {hub,task,cancel}=yield race({
+        hub:call(watchHub,channel),
+        task:take(["INVOKE"]),
+        cancel:take(["LOGOUT", "USER_CONNECT_DETECTED", "SESSION_TIME_OUT"])
+    })
 
-        call(watchHub, channel),
-
-        take(["LOGOUT", "USER_CONNECT_DETECTED", "SESSION_TIME_OUT"])
-    ]);
+    if(task.type==="INVOKE")
+    {
+     connection.invoke(task.payload.method,task.payload).then(r => r)
+    }
 
     if (cancel !== undefined) {
         connection.stop();
