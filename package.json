@@ -61,6 +61,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
     "flow-bin": "^0.137.0",
+    "hoist-non-react-statics": "^3.3.2",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6"
   }

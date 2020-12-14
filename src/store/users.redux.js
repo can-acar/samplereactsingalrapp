@@ -4,9 +4,9 @@ import {Action} from "redux";
 
 type IState={
     data:Array<{
-        userId:string,
-        name:string,
-        isOnline:boolean
+        clientId:string,
+        username:string,
+
     }>,
     loading:boolean
 }
@@ -19,10 +19,16 @@ const InitialState:IState={
 
 const actions={
     ["USER_LOAD"]:(state,{payload})=>{
-
+        return {
+            data:[],
+            loading: true
+        }
     },
-    ["USER_LOAD_SUCESS"]:(state,{payload})=>{
-
+    ["USER_LOAD_SUCCESS"]:(state,{payload})=>{
+        return {
+            data:payload,
+            loading: false
+        }
     },
     ["USER_LOAD_FAILED"]:(state,{payload})=>{
 

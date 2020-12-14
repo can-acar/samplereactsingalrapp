@@ -2,6 +2,8 @@
 import *as React from "react";
 import {memo} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useReducer} from "../commons/useReducer";
+import {users_redux} from "../store/users.redux";
 
 type IUserListNode={
 
@@ -10,9 +12,11 @@ type IUserListNode={
 
 const UserListNode=memo((props:IUserListNode)=>{
 
+    const users=useReducer({key:"users",reducer:users_redux})
 
+    console.log(users)
 
-    return <div className="discussion message-active">
+    const discussion =(item)=> <div key={item.clientId} className="discussion message-active">
         <div className="photo">
             <div className="online user-list"/>
             <FontAwesomeIcon
@@ -29,11 +33,14 @@ const UserListNode=memo((props:IUserListNode)=>{
 
         </div>
         <div className="desc-contact">
-            <p className="name">Megan Leib</p>
-            <p className="message">9 pm at the bar if possible 😳</p>
+            <p className="name">{item.username}</p>
+
         </div>
         <div className="timer">12 sec</div>
     </div>
+
+
+    return users.data.map(discussion)
 })
 
 export const UserList=memo(UserListNode)

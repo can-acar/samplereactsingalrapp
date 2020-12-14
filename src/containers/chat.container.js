@@ -27,7 +27,7 @@ type IProps={
 const ChatContainerNode=(props:IProps):React.Node=>{
 
     const[nav,changeNav]=useState({current:"users"});
-    const chat=useReducer({key:'chat',reducer:chat_redux})
+    const chat=useReducer({key:'chat',reducer:chat_redux,isDelete:false})
     const dispatch=useDispatch()
 
     useEffect(()=>{

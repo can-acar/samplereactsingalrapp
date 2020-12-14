@@ -14,6 +14,8 @@ type IGirisContainer={
 
 }
 
+const clientId=uuid();
+
 const GirisContainerNode=(props:IGirisContainer):React.Node=>{
 
     const [form:{name:string},updateForm:void]=useState({name:undefined})
@@ -30,8 +32,14 @@ const GirisContainerNode=(props:IGirisContainer):React.Node=>{
 
     const onFormSubmit=useCallback((event)=>{
         event.preventDefault()
-        dispatch(onGirisAction({...form,clientId:uuid()}))
-    },[giris,form,dispatch,onGirisAction])
+
+        dispatch(onGirisAction({
+            ...form,
+
+            clientId
+        }))
+
+    },[giris,form,dispatch,onGirisAction,clientId])
 
     return <div className="wrapper">
         <form className="form-signin" onSubmit={onFormSubmit} onChange={onFormUpdate}>

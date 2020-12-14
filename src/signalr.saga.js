@@ -2,7 +2,7 @@
 import * as signalR from "@microsoft/signalr";
 import {HubConnection} from "@microsoft/signalr";
 import {END, eventChannel} from 'redux-saga'
-import {all, call, put, race, take, takeEvery} from "redux-saga/effects";
+import {all, call,cancel, put, fork,race, take, takeEvery} from "redux-saga/effects";
 import withQuery from "with-query";
 
 
@@ -77,24 +77,31 @@ function* hubFlow({payload}: { channel: string, clientId: string, access_token: 
     let connection = yield call(socket, payload.url, payload);
     let channel = yield call(createChannel, connection, payload.channel);
 
-    const {hub,task,cancel}=yield race({
-        hub:call(watchHub,channel),
-        task:take(["INVOKE"]),
-        cancel:take(["LOGOUT", "USER_CONNECT_DETECTED", "SESSION_TIME_OUT"])
-    })
+        while(true){
 
-    if(task.type==="INVOKE")
-    {
-     connection.invoke(task.payload.method,task.payload).then(r => r)
-    }
 
-    if (cancel !== undefined) {
-        connection.stop();
-    }
+
+            const {hub,invoke, cancel} = yield race({
+                hub: call(watchHub, channel),
+                invoke:take(["INVOKE"]),
+                task: take([ "LOGOUT", "USER_CONNECT_DETECTED", "SESSION_TIME_OUT"])
+            })
+
+            if(invoke){
+                connection.invoke(invoke.payload.method, invoke.payload).then(r => r)
+            }
+
+            if(cancel){
+                connection.stop();
+
+            }
+        }
 
 }
 
 function* watchHub(eventChannel) {
+
+
     while (true) {
 
         const action = yield take(eventChannel);
@@ -102,6 +109,7 @@ function* watchHub(eventChannel) {
         yield put(action);
 
     }
+
 }
 
 export function* signalRsaga() {

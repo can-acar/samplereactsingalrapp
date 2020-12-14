@@ -47,6 +47,7 @@ export const useReducer = ({key, reducer, isDelete = true}: select) => {
     const store = useStore();
 
     if (!store.asyncReducers.hasOwnProperty(key)) {
+
         store.injectReducer(key, reducer);
     }
 

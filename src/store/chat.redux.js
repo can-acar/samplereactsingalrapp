@@ -38,6 +38,8 @@ const actions = {
     "CONNECTED": (state, {payload}) => ({
         ...state,
         ...payload,
+        connected: true,
+        loading: false
     }),
 
     "DISCONNECT": (state, {payload}) => ({
@@ -65,7 +67,7 @@ const actions = {
 };
 
 
-export const chat_redux = (state = InitialState, action:Action) => {
+export const chat_redux = (state = InitialState, action:Action<actions>) => {
 
     if (actions[action.type]) {
         return Object.assign({}, state,actions[action.type](state, action));
