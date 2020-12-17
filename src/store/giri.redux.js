@@ -2,40 +2,30 @@
 
 import {Action} from "redux";
 
-type IState={
-    data:{
-        userId:string,
-        connectionId:string,
-        name:string,
-        isOnline:boolean
-    },
-    loading:boolean
+type IState = {
+    userId: string,
+    name: string,
+    loading: boolean
 }
 
 
-const InitialState:IState={
-    data:{},
-    loading:false
+const InitialState: IState = {
+    userId: undefined,
+    name: undefined,
+    loading: false
 }
 
-const actions={
-    ["USER_LOGIN_REQUEST"]:(state,{payload})=>{
-
-    },
-    ["USER_LOGIN_SUCCESS"]:(state,{payload})=>{
-
-    },
-    ["USER_LOGIN_FAILED"]:(state,{payload})=>{
-
-    },
-
+const actions = {
+    ["GIRIS"]: (state, {payload}) => ({...state, ...payload, loading: true}),
+    ["GIRIS_SUCCESS"]: (state, {payload}) => ({...state, ...payload, loading: false}),
+    ["GIRIS_FAILED"]: (state, {payload}) => ({...state, ...payload, loading: false}),
 }
 
 
-export const giris_redux = (state = InitialState, action:Action<actions>) => {
+export const giris_redux = (state = InitialState, action: Action<actions>) => {
 
-    if (actions[action.type]) {
-        return Object.assign({}, state,actions[action.type](state, action));
+    if(actions[action.type]){
+        return Object.assign({}, state, actions[action.type](state, action));
     }
     return state;
 

@@ -4,10 +4,10 @@ import {Action} from "redux";
 
 let store = JSON.parse(localStorage.getItem("chat"));
 
-type IState={
+type IState = {
 
     clientId: string,
-    connectionId:string,
+    connectionId: string,
     access_token: string,
     time: string,
     connected: boolean,
@@ -16,10 +16,10 @@ type IState={
 }
 
 
-const InitialState :IState= {
+const InitialState: IState = {
 
     clientId: null,
-    connectionId:null,
+    connectionId: null,
     access_token: null,
     time: null,
     connected: false,
@@ -33,7 +33,8 @@ const actions = {
         ...state,
         ...payload,
         connected: false,
-        loading: true
+        loading: true,
+        ...store
     }),
     "CONNECTED": (state, {payload}) => ({
         ...state,
@@ -55,22 +56,22 @@ const actions = {
     "SEND": (state, {payload}) => {
         return {...state, payload};
     },
-    "LOGOUT":(state,{payload})=>{
+    "LOGOUT": (state, {payload}) => {
         return {...state, payload};
     },
-    "USER_CONNECT_DETECTED":(state,{payload})=>{
+    "USER_CONNECT_DETECTED": (state, {payload}) => {
         return {...state, payload};
     },
-    "SESSION_TIME_OUT":(state,{payload})=>{
+    "SESSION_TIME_OUT": (state, {payload}) => {
         return {...state, payload};
     }
 };
 
 
-export const chat_redux = (state = InitialState, action:Action<actions>) => {
+export const chat_redux = (state = InitialState, action: Action) => {
 
-    if (actions[action.type]) {
-        return Object.assign({}, state,actions[action.type](state, action));
+    if(actions[action.type]){
+        return Object.assign({}, state, actions[action.type](state, action));
     }
     return state;
 

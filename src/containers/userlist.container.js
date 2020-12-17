@@ -2,7 +2,7 @@
 import *as React from "react";
 import {memo} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useReducer} from "../commons/useReducer";
+import {useSelectState} from "../commons/useSelectState";
 import {users_redux} from "../store/users.redux";
 
 type IUserListNode={
@@ -12,7 +12,7 @@ type IUserListNode={
 
 const UserListNode=memo((props:IUserListNode)=>{
 
-    const users=useReducer({key:"users",reducer:users_redux})
+    const users=useSelectState({key:"users",reducer:users_redux})
 
     console.log(users)
 

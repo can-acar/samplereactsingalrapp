@@ -5,9 +5,9 @@ import {connectRouter} from "connected-react-router";
 import staticReducers from "../root.store";
 import {history} from "../history/index";
 
-export const createRootReducer = (asyncReducers:Reducer) => combineReducers({
-    router: connectRouter(history),
+export const createRootReducer = (asyncReducers: Reducer) => combineReducers({
+
     ...asyncReducers,
     ...staticReducers,
-
+    router: connectRouter(history),
 });

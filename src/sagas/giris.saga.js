@@ -3,6 +3,7 @@ import {all, call, put, takeEvery, race, take, select} from "redux-saga/effects"
 import {push} from "connected-react-router";
 
 function store(payload){
+    localStorage.clear();
     localStorage.setItem("chat", JSON.stringify(payload));
 }
 

@@ -1,7 +1,7 @@
 //@flow
 import * as React from "react";
 import {Component, useEffect} from "react";
-import {ReactReduxContext, useSelector, useStore} from "react-redux";
+import {ReactReduxContext, shallowEqual, useSelector, useStore} from "react-redux";
 import hoistNonReactStatic from "hoist-non-react-statics";
 
 type select = {
@@ -12,27 +12,27 @@ type select = {
 
 export default ({key, reducer, isDelete = true}: select): Object => WrappedComponent => {
 
-    class ReducerInjector extends Component<{}> {
+    class ReducerInjector extends Component<{}>{
         static WrappedComponent = WrappedComponent;
         static contextType = ReactReduxContext;
 
-        constructor(props, context) {
+        constructor(props, context){
             super(props, context);
 
-            if (!context.store.asyncReducers.hasOwnProperty(key)) {
+            if(!context.store.asyncReducers.hasOwnProperty(key)){
                 context.store.injectReducer(key, reducer);
             }
         }
 
-        componentWillUnmount() {
+        componentWillUnmount(){
             const {context} = this;
 
-            if (isDelete)
+            if(isDelete)
                 context.store.removeReducer(key);
 
         }
 
-        render() {
+        render(){
 
             return <WrappedComponent {...this.props}/>
         }
@@ -42,11 +42,11 @@ export default ({key, reducer, isDelete = true}: select): Object => WrappedCompo
 };
 
 
-export const useReducer = ({key, reducer, isDelete = true}: select) => {
+export const useSelectState = ({key, reducer, isDelete = true}: select) => {
 
     const store = useStore();
 
-    if (!store.asyncReducers.hasOwnProperty(key)) {
+    if(!store.asyncReducers.hasOwnProperty(key)){
 
         store.injectReducer(key, reducer);
     }
@@ -54,11 +54,11 @@ export const useReducer = ({key, reducer, isDelete = true}: select) => {
     useEffect(() => {
 
         return () => {
-            if (isDelete)
+            if(isDelete)
                 store.removeReducer(key);
         }
     }, [store, key, isDelete]);
 
-    return useSelector((state) => state[key]);
+    return useSelector(state => state[key], shallowEqual);
 
 }
