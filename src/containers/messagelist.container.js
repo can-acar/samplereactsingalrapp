@@ -1,43 +1,68 @@
 //@flow
 import *as React from "react";
-import {memo} from "react";
+import {Fragment, memo, useContext, useEffect, useRef} from "react";
+import {useSelector} from "react-redux";
+import {ChatContext} from "../commons/chatContext";
+import {useSelectState} from "../commons/useSelectState";
+import {message_redux} from "../store/message.redux";
+import classnames from "classnames";
+
+type IMessageListNodeNode = {}
+
+const Message = memo((props) => {
+    return <div className="message" key={props.item.message}>
+        {props.item.clientId === props.clientId ?
+
+            <p className="text"> {props.item.message}</p>
+
+            : <div className="response">
+                <p className="text"> {props.item.message}</p>
+            </div>
+        }
+
+    </div>
+})
+const timer = (left) => classnames({"response-time time": !left, "timer": left})
+
+const Splitter = (props) => <p className={timer(props.left)}/>
 
 
-type IMessageListNodeNode={
+const MessageListNode = memo((props: IMessageListNodeNode) => {
 
-}
-const MessageListNode=memo((props:IMessageListNodeNode)=>{
+    const {state, dispatch} = useContext(ChatContext);
+    const client = useSelector(select => select.chat_redux)
+    const messageList = useSelectState({key: "messages", reducer: message_redux})
+    const messagesEndRef = useRef(null)
+
+    const scrollToBottom = () => {
+        messagesEndRef.current.scrollIntoView({behavior: "smooth"})
+    }
+
+    const lastMesssageSame = () => {
+        console.log(messageList.data.slice(-1), client.clientId)
+    }
+
+    useEffect(scrollToBottom, [messageList])
+
+    useEffect(() => {
+
+        console.log(messageList, lastMesssageSame())
+
+    }, [messageList, lastMesssageSame])
+
 
     return <div className="messages-chat">
-        <div className="message">
-            <div className="photo">
-                <div className="online"></div>
-            </div>
-            <p className="text"> Hi, how are you ? </p>
-        </div>
-        <div className="message text-only">
-            <p className="text"> What are you doing tonight ? Want to go take a drink ?</p>
-        </div>
-        <p className="time"> 14h58</p>
-        <div className="message text-only">
-            <div className="response">
-                <p className="text"> Hey Megan ! It's been a while 😃</p>
-            </div>
-        </div>
-        <div className="message text-only">
-            <div className="response">
-                <p className="text"> When can we meet ?</p>
-            </div>
-        </div>
-        <p className="response-time time"> 15h04</p>
-        <div className="message">
-            <div className="photo" >
-                <div className="online"></div>
-            </div>
-            <p className="text"> 9 pm at the bar if possible 😳</p>
-        </div>
-        <p className="time"> 15h09</p>
+        {
+            messageList.data.map((p, i) => {
+                return <Fragment key={i}>
+                    <Message item={p} clientId={client.clientId}/>
+
+                </Fragment>
+            })
+
+        }
+        <div ref={messagesEndRef}/>
     </div>
 })
 
-export const MessageList=memo(MessageListNode)
+export const MessageList = memo(MessageListNode)

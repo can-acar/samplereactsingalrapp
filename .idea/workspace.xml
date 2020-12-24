@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e0297d7-282b-4405-bf65-6e798fa10451" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/commons/chatContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/chat.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/chat.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/footer.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/footer.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/header.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/header.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/messagelist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/messagelist.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/userlist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/userlist.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas/chat.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/chat.saga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sagas/giris.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/giris.saga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/message.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/message.redux.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,23 +58,26 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Users\can.acar\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\203.5981.135\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\samplereactsingalrapp\src\commons" />
       <recent name="E:\Projects\samplereactsingalrapp\src\history" />
       <recent name="E:\Projects\samplereactsingalrapp\src\sagas" />
       <recent name="E:\Projects\samplereactsingalrapp\src\store" />
       <recent name="E:\Projects\samplereactsingalrapp\src\containers" />
-      <recent name="E:\Projects\samplereactsingalrapp\src\actions" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -102,6 +115,10 @@
       <workItem from="1607865657886" duration="14974000" />
       <workItem from="1608200497684" duration="120000" />
       <workItem from="1608205290968" duration="7412000" />
+      <workItem from="1608554223061" duration="1120000" />
+      <workItem from="1608555369465" duration="2480000" />
+      <workItem from="1608641186079" duration="84000" />
+      <workItem from="1608792182451" duration="16765000" />
     </task>
     <servers />
   </component>

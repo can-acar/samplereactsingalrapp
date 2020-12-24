@@ -2,40 +2,41 @@
 
 import {Action} from "redux";
 
-type IState={
-    data:Array<{
-        userId:string,
-        fromId:string,
-        message:string,
-        isRead:boolean
+type IState = {
+    data: Array<{
+        userId: string,
+        fromId: string,
+        message: string,
+        isRead: boolean
     }>,
-    loading:boolean
+    loading: boolean
 }
 
 
-const InitialState:IState={
-    data:[],
-    loading:false
+const InitialState: IState = {
+    data: [],
+    loading: false
 }
 
-const actions={
-    ["MESSAGE_LOAD"]:(state,{payload})=>{
-
-    },
-    ["MESSAGE_LOAD_SUCCESS"]:(state,{payload})=>{
-
-    },
-    ["MESSAGE_LOAD_FAILED"]:(state,{payload})=>{
-
+const actions = {
+    ["MESSAGE"]: (state, {payload}) => {
+        return {
+            data: state.data.concat(payload)
+        }
     },
 
+    ["NOTIFY"]: (state, {payload}) => {
+        return {
+            data: state.data.concat(payload)
+        }
+    }
 }
 
 
-export const message_redux = (state = InitialState, action:Action<actions>) => {
+export const message_redux = (state = InitialState, action: Action<actions>) => {
 
-    if (actions[action.type]) {
-        return Object.assign({}, state,actions[action.type](state, action));
+    if(actions[action.type]){
+        return Object.assign({}, state, actions[action.type](state, action));
     }
     return state;
 
