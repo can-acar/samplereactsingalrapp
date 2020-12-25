@@ -3,7 +3,11 @@ import {all, fork, put, takeEvery, call, take, delay, select} from "redux-saga/e
 import {push} from "connected-react-router";
 
 function store(payload){
+
     localStorage.clear()
+
+    localStorage.removeItem("chat")
+
     localStorage.setItem("chat", JSON.stringify(payload));
 }
 
@@ -54,7 +58,7 @@ function* watchUserConnection(){
 
 function* watchChat(){
     while(true){
-        const task = yield take(["SEND_MESSAGE", "RECIEVE_MESSAGE","NEW_MESSAGE"])
+        const task = yield take(["SEND_MESSAGE", "RECIEVE_MESSAGE", "NEW_MESSAGE"])
 
         if(task.type === "SEND_MESSAGE"){
             yield put({type: "MESSAGE", payload: task.payload})

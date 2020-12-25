@@ -10,18 +10,20 @@ import classnames from "classnames";
 type IMessageListNodeNode = {}
 
 const Message = memo((props) => {
-    return <div className="message" key={props.item.message}>
-        {props.item.clientId === props.clientId ?
 
-            <p className="text"> {props.item.message}</p>
-
-            : <div className="response">
-                <p className="text"> {props.item.message}</p>
+    return <div className="message">
+        {
+            props.messageId === props.clientId && <p className="text"> {props.message}</p>
+        }
+        {
+            props.messageId === props.fromId && <div className="response">
+                <p className="text"> {props.message}</p>
             </div>
         }
 
     </div>
 })
+
 const timer = (left) => classnames({"response-time time": !left, "timer": left})
 
 const Splitter = (props) => <p className={timer(props.left)}/>
@@ -38,27 +40,15 @@ const MessageListNode = memo((props: IMessageListNodeNode) => {
         messagesEndRef.current.scrollIntoView({behavior: "smooth"})
     }
 
-    const lastMesssageSame = () => {
-        console.log(messageList.data.slice(-1), client.clientId)
-    }
-
     useEffect(scrollToBottom, [messageList])
-
-    useEffect(() => {
-
-        console.log(messageList, lastMesssageSame())
-
-    }, [messageList, lastMesssageSame])
-
 
     return <div className="messages-chat">
         {
-            messageList.data.map((p, i) => {
-                return <Fragment key={i}>
-                    <Message item={p} clientId={client.clientId}/>
-
-                </Fragment>
-            })
+            messageList.data.map((p, i) => <Message key={i}
+                                                    message={p.message}
+                                                    messageId={p.clientId}
+                                                    fromId={state.clientId}
+                                                    clientId={client.clientId}/>)
 
         }
         <div ref={messagesEndRef}/>

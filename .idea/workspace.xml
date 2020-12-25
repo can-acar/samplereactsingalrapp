@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e0297d7-282b-4405-bf65-6e798fa10451" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/commons/chatContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/chat.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/chat.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/footer.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/footer.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/header.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/header.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/messagelist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/messagelist.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/userlist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/userlist.container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sagas/chat.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/chat.saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/giris.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/giris.saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/message.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/message.redux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/chat.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chat.redux.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +111,7 @@
       <workItem from="1608554223061" duration="1120000" />
       <workItem from="1608555369465" duration="2480000" />
       <workItem from="1608641186079" duration="84000" />
-      <workItem from="1608792182451" duration="16765000" />
+      <workItem from="1608792182451" duration="24007000" />
     </task>
     <servers />
   </component>
