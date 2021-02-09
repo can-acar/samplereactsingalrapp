@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e0297d7-282b-4405-bf65-6e798fa10451" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/chat.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/chat.action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/giri.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/giri.action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commons/useReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/commons/useSelectState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/chat.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/chat.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/giris.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/giris.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/header.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/header.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/userlist.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/userlist.container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/root.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/root.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/chat.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/chat.saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sagas/giris.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sagas/giris.saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/chat.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/chat.redux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/giri.redux.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/giri.redux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +103,7 @@
       <workItem from="1607865657886" duration="14974000" />
       <workItem from="1608200497684" duration="120000" />
       <workItem from="1608205290968" duration="6167000" />
+      <workItem from="1608830763217" duration="183000" />
     </task>
     <servers />
   </component>
