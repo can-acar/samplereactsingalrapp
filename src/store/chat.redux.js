@@ -31,10 +31,11 @@ const actions = {
 
     "CONNECT": (state, {payload}) => ({
         ...state,
+        ...store,
         ...payload,
         connected: false,
         loading: true,
-        ...store
+
     }),
     "CONNECTED": (state, {payload}) => ({
         ...state,
